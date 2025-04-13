@@ -34,13 +34,13 @@ const ValuesSection = ({ className }: ValuesSectionProps) => {
           </h3>
         </header>
       </AppContainer>
-      <AppContainer className={cn('mb-20 h-full')}>
+      <AppContainer className={cn('h-full')}>
         <div className="relative z-10 mx-auto mt-[-310px] w-[80%] shadow">
           <div className="flex overflow-hidden rounded-xl bg-white shadow">
             <div className={cn('flex flex-col justify-around px-10 py-12')}>
-              {values.map((value) => (
+              {values.map((value, index) => (
                 <ValueCard
-                  key={value.title}
+                  key={index}
                   title={value.title}
                   description={value.description}
                   icon={value.icon}

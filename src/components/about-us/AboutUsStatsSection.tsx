@@ -10,9 +10,15 @@ const stats = [
   { label: 'شرکت', value: '30', description: 'تجربه کاری' },
 ];
 
-const AboutUsStatsSection = () => {
+interface AboutUsStatsSectionProps {
+  className?: string;
+}
+
+const AboutUsStatsSection = ({ className }: AboutUsStatsSectionProps) => {
   return (
-    <section className="mb-60 w-full overflow-hidden py-10 text-white">
+    <section
+      className={cn('w-full overflow-hidden py-10 text-white', className)}
+    >
       <AppContainer className={cn('h-auto px-10')}>
         <FlexBetween>
           {stats.map((stat, idx) => (
