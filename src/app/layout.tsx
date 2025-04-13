@@ -26,7 +26,7 @@ export default function RootLayout({
           <AppProvider>
             {authModal}
             {children}
-            <FooterSection />
+            <FooterSection className={cn('mt-[70px]')} />
           </AppProvider>
           <div id="portal-root" />
         </main>

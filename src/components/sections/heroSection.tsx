@@ -4,11 +4,11 @@ import AppContainer from '../appContainer';
 import { FlexBetween, FlexCenterCol } from '../ui/flexBox';
 import { CheckCircle } from 'solar-icon-set';
 import { headerFeatures } from '@/constants';
-import QuickAccessServices from './quickAccessServicesSection';
+import HighlightSection from '../about-us/HighlightSection';
 
 const HeroSection = () => {
   return (
-    <section className="mb-20">
+    <section>
       <div
         className={cn(
           'from-primary-main to-hero-section-main relative h-[677] bg-radial',
@@ -39,9 +39,9 @@ const HeroSection = () => {
           className={cn('absolute inset-0 bg-[url(/wavy-pattern.png)]')}
         ></div>
       </div>
-      <AppContainer className={cn('mb-20 h-full')}>
-        <div className="relative z-10 mx-auto mt-[-36px] w-[80%]">
-          <QuickAccessServices />
+      <AppContainer className={cn('h-full')}>
+        <div className="relative z-10 mx-auto mt-[-60px] w-[80%]">
+          <HighlightSection />
         </div>
       </AppContainer>
     </section>

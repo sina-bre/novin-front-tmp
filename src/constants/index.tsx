@@ -11,7 +11,14 @@ import {
   MapPointWave,
   Phone,
   Plain,
+  Layers,
+  UsersGroupRounded,
+  Hourglass,
 } from 'solar-icon-set';
+import Image01 from '@public/image01.jpg';
+import Image02 from '@public/image02.jpg';
+import Image03 from '@public/image03.jpg';
+import { StaticImageData } from 'next/image';
 
 export type HeaderMenuItem = Readonly<{
   label: string;
@@ -66,6 +73,18 @@ interface MenuSection {
   icon: ReactNode;
   className?: string;
   items: MenuItem[];
+}
+
+interface ValueItem {
+  title: string;
+  description: string;
+  icon: ReactNode;
+}
+
+export interface TeamMember {
+  image: StaticImageData;
+  name: string;
+  role: string;
 }
 
 export const quickAccessServicesNavigation: QuickAccessServiceNavigationItem[] =
@@ -424,5 +443,77 @@ export const menuSections: MenuSection[] = [
       { href: '#', label: 'تعداد چک برگشتی' },
       { href: '#', label: 'اعتبار سنجی' },
     ],
+  },
+];
+
+export const values: ValueItem[] = [
+  {
+    title: 'ارزش های ما لورم',
+    description:
+      'ارزش های ما لورم اپسیونلورم ایپسوم متن ساختگی ب ا لورم ایپسوم متن ساختگی با تولید',
+    icon: (
+      <Layers
+        iconStyle="Outline"
+        size={60}
+        className={cn('text-main-light!')}
+      />
+    ),
+  },
+  {
+    title: 'ارزش های ما لورم',
+    description:
+      'ارزش های ما لورم اپسیونلورم ایپسوم متن ساختگی ب ا لورم ایپسوم متن ساختگی با تولید',
+    icon: (
+      <UsersGroupRounded
+        iconStyle="Outline"
+        size={60}
+        className={cn('text-main-light!')}
+      />
+    ),
+  },
+  {
+    title: 'ارزش های ما لورم',
+    description:
+      'ارزش های ما لورم اپسیونلورم ایپسوم متن ساختگی ب ا لورم ایپسوم متن ساختگی با تولید',
+    icon: (
+      <Hourglass
+        iconStyle="Outline"
+        size={60}
+        className={cn('text-main-light!')}
+      />
+    ),
+  },
+];
+
+export const teamMembers: TeamMember[] = [
+  {
+    image: Image01,
+    name: 'آرش نیکسیر',
+    role: 'طراح و دیزاینر UIUX ، لیسانس کامپیوتر گرایش هوش مصنوعی',
+  },
+  {
+    image: Image02,
+    name: 'لیام پاک نیا',
+    role: 'طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی',
+  },
+  {
+    image: Image03,
+    name: 'سینا برادران',
+    role: 'طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی',
+  },
+  {
+    image: Image01,
+    name: 'آرش نیکسیر',
+    role: 'طراح و دیزاینر UIUX ، لیسانس کامپیوتر گرایش هوش مصنوعی',
+  },
+  {
+    image: Image02,
+    name: 'لیام پاک نیا',
+    role: 'طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی',
+  },
+  {
+    image: Image03,
+    name: 'سینا برادران',
+    role: 'طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی',
   },
 ];
