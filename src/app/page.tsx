@@ -30,7 +30,7 @@ export default async function Landing() {
       <MoreAboutUsSection />
       <FaqSection />
 
-      <FooterSection className="mt-20" />
+      {/* <FooterSection className="mt-20" /> */}
     </FlexCol>
   );
 }

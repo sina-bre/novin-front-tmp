@@ -11,6 +11,9 @@ import {
   MapPointWave,
   Phone,
   Plain,
+  Layers,
+  UsersGroupRounded,
+  Hourglass,
 } from 'solar-icon-set';
 
 export type HeaderMenuItem = Readonly<{
@@ -66,6 +69,12 @@ interface MenuSection {
   icon: ReactNode;
   className?: string;
   items: MenuItem[];
+}
+
+interface ValueItem {
+  title: string;
+  description: string;
+  icon: ReactNode;
 }
 
 export const quickAccessServicesNavigation: QuickAccessServiceNavigationItem[] =
@@ -424,5 +433,44 @@ export const menuSections: MenuSection[] = [
       { href: '#', label: 'تعداد چک برگشتی' },
       { href: '#', label: 'اعتبار سنجی' },
     ],
+  },
+];
+
+export const values: ValueItem[] = [
+  {
+    title: 'ارزش های ما لورم',
+    description:
+      'ارزش های ما لورم اپسیونلورم ایپسوم متن ساختگی ب ا لورم ایپسوم متن ساختگی با تولید',
+    icon: (
+      <Layers
+        iconStyle="Outline"
+        size={60}
+        className={cn('text-main-light!')}
+      />
+    ),
+  },
+  {
+    title: 'ارزش های ما لورم',
+    description:
+      'ارزش های ما لورم اپسیونلورم ایپسوم متن ساختگی ب ا لورم ایپسوم متن ساختگی با تولید',
+    icon: (
+      <UsersGroupRounded
+        iconStyle="Outline"
+        size={60}
+        className={cn('text-main-light!')}
+      />
+    ),
+  },
+  {
+    title: 'ارزش های ما لورم',
+    description:
+      'ارزش های ما لورم اپسیونلورم ایپسوم متن ساختگی ب ا لورم ایپسوم متن ساختگی با تولید',
+    icon: (
+      <Hourglass
+        iconStyle="Outline"
+        size={60}
+        className={cn('text-main-light!')}
+      />
+    ),
   },
 ];

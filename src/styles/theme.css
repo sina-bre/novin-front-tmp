@@ -48,5 +48,6 @@
   --color-teal-ocean: #2d90a0;
   --color-sunset-gold: #ff8700;
   --color-custom-gray-500: #e4e5ef;
+  --color-main-light: #aca5e8;
   --shadow-main: 0 0 12px var(--color-gray-200);
 }
